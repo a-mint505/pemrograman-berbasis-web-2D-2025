@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .container {
+            max-width: 650px;
+            margin: auto;
+        }
+        .img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            height: 125px;
+            width: 125px;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: 10px 0;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4c82af;
+            color: white;
+        }
+        .kolom-kiri {
+            width: 48%;
+        }
+        .kolom-kanan {
+            width: 52%;
+        }
+        a {
+            padding: 5px;
+            text-decoration: none;
+            color: #000000;
+        }
+        ol {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            margin: 3px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        p {
+            background-color: #e1e0df;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #202020;
+            text-align: justify;
+        }
+        .form-container {
+            margin: 10px;
+            background-color: #e1e0df;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"] {
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="checkbox"]:checked, input[type="radio"]:checked {
+            accent-color: #2622a8;
+        }
+        .perangkat-lunak, .sistem-operasi {
+            margin-bottom: 10px;
+        }
+        .button {
+            background-color: #5476d1;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .button-container {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PROFIL PRIBADI</h1>
+        <img class="img" src="pas foto.jpg" alt="Foto M. Aminuddin Marhan">
+
+        <h2>Biografi</h2>
+        <table border="4" cellpadding="10">
+            <tr>
+                <th class="kolom-kiri">Informasi</th>
+                <th class="kolom-kanan">Detail</th>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td>M. Aminuddin Marhan</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>Pakis Gunung 2 No. 31, Surabaya</td>
+            </tr>
+            <tr>
+                <td>Tempat, Tanggal Lahir</td>
+                <td>Surabaya, 26 Februari 2006</td>
+            </tr>
+            <tr>
+                <td>Nomor HP</td>
+                <td>0858-3052-1398</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>aaminuddin81@gmail.com</td>
+            </tr>
+        </table>
+
+        <h2>Daftar Riwayat Pendidikan</h2>
+        <ol>
+            <li>SD (2012-2018): SDN Pakis VIII Surabaya</li><br>
+            <li>SMP (2018-2021): SMPN 46 Surabaya</li><br>
+            <li>SMK (2021-2024): SMK Ketintang Surabaya</li><br>
+            <li>Perguruan Tinggi (2024-Sekarang): Universitas Trunojoyo Madura</li>
+        </ol>
+
+        <table border="4" cellpadding="10">
+            <tr>
+                <th class="kolom-kiri">Hobi</th>
+                <th class="kolom-kanan">Minat</th>
+            </tr>
+            <tr>
+                <td>Menonton Pertandingan Basket</td>
+                <td>Komputer dan Jaringan</td>
+            </tr>
+            <tr>
+                <td>Menonton Film / TV Series</td>
+                <td>Basis Data</td>
+            </tr>
+            <tr>
+                <td>Mendengarkan Musik</td>
+                <td>Programming</td>
+            </tr>
+        </table>
+
+        <h2>Pengalaman</h2>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Saya pernah magang di Pengadilan Negeri Surabaya, tepatnya di bagian 
+            Perencanaan Teknologi Informasi Pelaporan (PTIP). Saya magang selama 4 bulan, pada bulan
+            Januari-Februari 2024 dan bulan Juli-Agustus 2024. Saya juga mengikuti organisasi Karang Taruna
+            di Kampung Saya dan juga orgnisasi UKM-FT ITC di kampus. Saya pernah menjadi panitia lomba bola
+            voli di kampung saya divisi PDD, dan juga menjadi pantia Technotainment divisi Perlengkapan.
+        </p>
+
+        <h2>Kesan, Cita-Cita, Harapan</h2>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Kesan pertama Saya kuliah yang pastinya bersyukur, senag, dan bangga.
+            Dulu pada saat Saya SMK, pikiran Saya untuk kuliah cukup kecil. Karena ya  memang tujuan Saya
+            untuk masuk SMK agar bisa mendapatkan pekerjaan, namun takdir memberi Saya jalan yang lain.
+            Dan untuk kesan pertama kali bertemu sesama maba cukup mengasyikan orang-orangnya, dan itu
+            menjadikan salah satu alasan Saya untuk tetap melanjutkan kuliah.
+        </p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;Untuk cita-cita Saya sendiri sebenernya cukup banyak. Dari kecil Saya
+            ingin menjadi Astronot dan Tentara, namun pada saat beranjak remaja saya pun sempat berpiki
+            "wah, nanti pas gede mau jadi apa aku ya", sampai pertengahan SMK. Setelah Saya mulai memahami
+            materi-materi di sekolah, Saya mulai mempunyai ketertarikan di bidang IT khususnya jaringan,
+            dan sedikit tentang <i>programming</i>. Dan untuk harapan kepada Saya sendiri, semoga bisa
+            melangkah lebih jauh dan membuktikan investasi orang tua Saya terhadap Saya.
+        </p>
+
+        <h2>Form</h2>
+        <form>
+            <div class="form-container">
+                <label for="bahasa-pemrorgaman">Bahasa pemrograman yang dikuasai:</label>
+                <input type="text" id="bahasa-pemrorgaman" name="bahasa-pemrorgaman">
+                <label for="bahasa-asing">Bahasa asing yang bisa digunakan:</label>
+                <input type="text" id="bahasa-pemrorgaman" name="bahasa-pemrorgaman">
+                <label>Perangkat lunak yang sering digunakan:</label>
+                <div class="perangkat-lunak">
+                    <label>
+                        <input type="checkbox" name="software" value="wa">WhatsApp
+                    </label>
+                    <label>
+                        <input type="checkbox" name="software" value="ig">Instagram
+                    </label>
+                    <label>
+                        <input type="checkbox" name="software" value="vscode">Visual Studio Code
+                    </label>
+                </div>
+                <label>Sistem operasi yang biasa digunakan:</label>
+                <div class="sistem-operasi">
+                    <label>
+                        <input type="radio" name="os" value="windows">Windows
+                    </label>
+                    <label>
+                        <input type="radio" name="os" value="linux">Linux
+                    </label>
+                    <label>
+                        <input type="radio" name="os" value="macos">macOs
+                    </label>
+                </div>
+            </div>
+        </form>
+
+            <div class="button-container">
+                <a href="modul1_halaman2.html" class="button">Halaman 2</a>
+                <a href="modul1_halaman3.html" class="button">Halaman 3</a>
+            </div>
+
+    </div>
+</body>
+</html>
