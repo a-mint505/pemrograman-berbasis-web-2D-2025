@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .bagian.dark-mode{
+            background-color: rgb(29, 29, 29);
+            color: white;
+        }
+
+        .teks.dark-mode{
+            color: rgb(207, 207, 207);
+        }
+
+        .tombol{
+            color: black;
+        }
+
+        .formulir.dark-mode{
+            border-color: white;
+        }
+    </style>
+</head>
+<body class="container bagian">
+    <section class="mx-24 my-16 flex justify-between bagian">
+        <div class="my-2 mr-20" style="width: 40%;">
+            <img src="ASSET SESI 2/Gambar 1 (1).png" class="w-auto h-auto">
+            <p class="py-3 text-xl font-semibold text-justify">
+                Karina siap membantu mewujudkan ide dan impian anda
+            </p>
+            <p class="text-gray-500 teks">
+                Dimulai dari riset hingga pengerjaan proyek nyata yang berdampak dan bermakna
+            </p>
+        </div>
+
+        <div class="my-2 ml-20" style="width: 40%;">
+            <form id="projectForm" class="space-y-5 formulir">
+                <div>
+                    <label for="nama" class="block font-semibold">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" class="mt-1 w-full p-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400">
+                </div>
+
+                <div>
+                    <label for="email" class="block font-semibold">Alamat Email</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" class="mt-1 w-full p-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400">
+                </div>
+
+                <div>
+                    <label for="deskripsi" class="block font-semibold">Deskripsi Proyek</label>
+                    <textarea id="deskripsi" name="deskripsi" rows="4" placeholder="Ceritakan sedikit tentang proyek Anda" class="mt-1 w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"></textarea>
+                </div>
+
+                <div>
+                    <label for="anggaran" class="block font-semibold">Kisaran Anggaran</label>
+                    <input type="text" id="anggaran" name="anggaran" placeholder="Berapa anggaran Anda?" class="mt-1 w-full p-3 border border-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400">
+                </div>
+
+                <button type="submit" class="w-full bg-yellow-300 font-semibold py-3 rounded-xl tombol">
+                    Kirim Pesan
+                </button>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.getElementById("projectForm").addEventListener("submit", function (e) {
+            const nama = document.getElementById("nama").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const deskripsi = document.getElementById("deskripsi").value.trim();
+            const anggaran = document.getElementById("anggaran").value.trim();
+
+            const namaPattern = /^[a-zA-Z\s'-]+$/;
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+            const anggaranPattern = /^[0-9]+$/;
+
+            if (!nama || !email || !anggaran || !deskripsi) {
+                alert("Harap isi semua bidang wajib (Nama, Email, Deskripsi, dan Anggaran).");
+                e.preventDefault();
+                return;
+            }
+
+            if (!namaPattern.test(nama)) {
+                alert("Nama hanya boleh berisi huruf, spasi, tanda petik satu (') dan tanda hubung (-).");
+                e.preventDefault();
+                return;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Format email tidak valid.");
+                e.preventDefault();
+                return;
+            }
+
+            if (!anggaranPattern.test(anggaran)) {
+                alert("Anggaran harus berupa angka.");
+                e.preventDefault();
+                return;
+            }
+
+            if (parseInt(anggaran) < 10000) {
+                alert("Anggaran minimal adalah Rp 10000");
+                e.preventDefault();
+                return;
+            }
+
+        });
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const isDark = localStorage.getItem('dark-mode') === 'true';
+            if (isDark) {
+                applyDarkMode(true);
+            }
+        });
+
+        function applyDarkMode(aktif) {
+            const body = document.body;
+            const bagianElements = document.querySelectorAll('.bagian');
+            const teksElements = document.querySelectorAll('.teks');
+            const tombolElements = document.querySelectorAll('.tombol');
+
+            if (aktif) {
+                bagianElements.forEach(b => b.classList.add('dark-mode'));
+                teksElements.forEach(t => t.classList.add('dark-mode'));
+                tombolElements.forEach(tombol => tombol.classList.add('dark-mode'));
+            } else {
+                bagianElements.forEach(b => b.classList.remove('dark-mode'));
+                teksElements.forEach(t => t.classList.remove('dark-mode'));
+                tombolElements.forEach(tombol => tombol.classList.remove('dark-mode'));
+            }
+        }
+    </script>
+</body>
+</html>
